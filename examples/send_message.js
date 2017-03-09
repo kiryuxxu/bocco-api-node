@@ -1,7 +1,6 @@
 var bocco = require('../lib/bocco');
 
-var accessToken = 'ACCESS TOKEN';
-var api = new bocco.ApiClient({accessToken: accessToken});
+var api = new bocco.ApiClient('ACCESS TOKEN');
 
 api.getRooms()
   .then(function(rooms) {

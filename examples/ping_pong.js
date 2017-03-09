@@ -1,11 +1,10 @@
 var bocco = require('../lib/bocco');
 
-var accessToken = 'ACCESS TOKEN';
 var roomUuid = 'ROOM UUID';
-var api = new bocco.ApiClient({accessToken: accessToken});
+var api = new bocco.ApiClient('ACCESS TOKEN');
 var keywords = ['おはよう', 'おやすみ', 'こんにちは', 'こんばんは'];
 
-api.createSubscription(roomUuid).start()
+api.createSubscription(roomUuid)
   .on('request', function(uuid, lastMessageId) {
     console.log(`request ${uuid} ${lastMessageId}`);
   })
@@ -28,5 +27,6 @@ api.createSubscription(roomUuid).start()
   })
   .on('error', function(e) {
     console.log(e);
-  });
+  })
+  .start();
 
