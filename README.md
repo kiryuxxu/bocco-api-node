@@ -1,6 +1,6 @@
 # bocco-api-node
 
-コミュニケーションロボット BOCCO を操作するための `BOCCO API <api-docs.bocco.me>`_
+コミュニケーションロボット BOCCO を操作するための [BOCCO API](http://api-docs.bocco.me)
 を node.js から操作するためのライブラリです。
 
 ```node
