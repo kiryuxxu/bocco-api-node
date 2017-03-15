@@ -1,8 +1,11 @@
-var bocco = require('../lib/bocco');
+const bocco = require('../lib/bocco');
 
-var api = new bocco.ApiClient('ACCESS TOKEN');
 
-api.getRooms()
+const API_KEY = 'API KEY';
+
+
+new bocco.ApiClient(API_KEY)
+  .getRooms()
   .then(function(rooms) {
     rooms.forEach(function(room) {
       console.log(`${room.name}(${room.uuid}) にメッセージを送信中`);
