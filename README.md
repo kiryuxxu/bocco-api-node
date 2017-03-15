@@ -1,11 +1,13 @@
 # bocco-api-node
 
 コミュニケーションロボット BOCCO を操作するための [BOCCO API](http://api-docs.bocco.me)
-を node.js から操作するためのライブラリです。
+を node.js から利用するためのライブラリです。
 
 ```node
-var bocco = require('bocco');
-var api = bocco.ApiClient('ACCESS TOKEN');
+const bocco = require('bocco');
+
+let api = bocco.ApiClient('ACCESS TOKEN');
+
 api.getRooms().then(function(rooms) {
     // 全ての部屋にメッセージを送る
     rooms.forEach(function(room) {
